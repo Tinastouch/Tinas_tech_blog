@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote } = require('../../models');
+const { Post, User, Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -80,9 +80,10 @@ router.get('/:id', (req, res) => {
 
 // Create a post - {'title':'How to make steel pan sticks','body':'body of cool stixx related article','user_id':1}
 router.post('/', withAuth, (req, res) => {
+    console.log(req.body)
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    body: req.body.text,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
