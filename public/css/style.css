@@ -220,6 +220,8 @@ color: azure;
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+    position: fixed;
+    bottom: 0;
   }
   
   /* HEIGHT / WIDTH UTILS */
