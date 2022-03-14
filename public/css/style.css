@@ -12,7 +12,7 @@
   }
   
   body {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     margin: 0;
     padding: 0;
     font-family: "IBM Plex Sans", sans-serif;
@@ -37,6 +37,12 @@
 main {
   width: 80%;
 }
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
   
   p {
     font-size: 1.2rem;
@@ -59,7 +65,9 @@ main {
   }
 
   section {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: var(--primary);
   }
 
    .btn:hover {
@@ -116,14 +124,14 @@ color: azure;
   }
   
   .hero {
-    padding: 3% 4%;
+    padding: 1em 4em;
     width: 100%;
     background-color: var(--dark);
     color: var(--primary);
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1.5em;
   }
   
@@ -220,8 +228,27 @@ color: azure;
     justify-content: center;
     padding: 1%;
     font-size: 110%;
-    position: fixed;
+    position: relative;
     bottom: 0;
+  }
+
+  .post-div {
+    display: flex;
+    margin: 1.5em 2em;
+    gap: 1em;
+  }
+
+  label {
+    min-width: 2.8em;
+  }
+
+  #post-title {
+    flex-grow: 1;
+  }
+
+  #post-body {
+    flex-grow: 1;
+    min-height: 4em;
   }
   
   /* HEIGHT / WIDTH UTILS */
