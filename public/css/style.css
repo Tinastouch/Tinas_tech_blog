@@ -50,6 +50,7 @@ ol {
   
    .btn {
     font-size: 1.3rem;
+    height: 1.8em;
     text-decoration:none;
     padding: 6px 5px;
     width: 100%;
@@ -196,9 +197,13 @@ color: azure;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
   }
   
+  .comment {
+    margin-bottom: 0;
+  }
   .card-body {
     padding: 2.5%;
-    width: 30%;
+    width: 60%;
+    margin: 0 auto;
   }
   
   /* FORM */
@@ -206,6 +211,11 @@ color: azure;
   .form-input,
   .form-textarea {
     display: block;
+  }
+
+  .form-control {
+    flex-grow: 1;
+    min-height: 3em;
   }
   
   .form-label {
@@ -215,11 +225,32 @@ color: azure;
   
   .form-input {
     width: 100%;
-    padding: 3%;
-    margin: 1px 0;
+    padding: 0.1em 0.5em;
     font-size: 1.2rem;
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
+    height: 2rem;
+  }
+
+  .padded {
+    padding: 1em;
+    background-color: var(--primary)
+  }
+
+  .edit-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  .half {
+    width: 45%;
+  }
+
+  .edit-title {
+    flex-grow: 1;
+    height: 1.8em;
   }
 
   footer {
@@ -241,6 +272,7 @@ color: azure;
   label {
     min-width: 2.8em;
   }
+
 
   #post-title {
     flex-grow: 1;
@@ -264,6 +296,10 @@ color: azure;
   .text-uppercase {
     text-transform: uppercase;
   }
+
+  .text {
+    margin: 0.5em 1em;
+  }
   
   
   /* FLEX CONTENT */
@@ -276,6 +312,7 @@ color: azure;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 1em;
   }
   
   .justify-space-between {
