@@ -1,31 +1,37 @@
 {{!-- {{> post-data post }} --}}
 <div class="col-9">
-    <article class="card">
+    <article class="card padded">
         <div class="title allPost">
             <h3>{{post.title}}</h3>
         </div>
         <div class="">
             <em>Posted by {{post.user.username}} on {{format_date post.created_at}}</em>
         </div>
-        <div class="body">
+        <div class="body padded">
             {{post.body}}
         </div>
     </article>
 
     {{!-- add comment --}}
-    {{#if loggedIn}}
-        <form class="card" id="comment-form">
-            <div class="">
-                <textarea class="form-control" rows="3" name="comment-body" id="post-text" placeholder="Add Comment"></textarea>
-            </div>
+    
+<section>
+  <h2 class="sub-title">
+    Post Comments
+  </h2> 
+  <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+  {{> comments post.comments}}
+{{#if loggedIn}}
+<form class="comment-form" id="comment-form">
+  <div class="post-div">
+    <textarea class="form-control" name="comment-body"></textarea>
+  </div>
 
-            <div>
-                <button type="submit" class="btn btn-success">Add Comment</button>
-            </div>
-        </form>
+  <div>
+    <button type="submit" class="btn">Add comment</button>
+  </div>
+</form>
+</section>
     {{/if}}
-
-    {{> comments post.comments}}
 
 </div>
 {{#if loggedIn}}
