@@ -85,7 +85,7 @@ a:active {
     border: none;
     outline: none;
     background-image: radial-gradient(var(--light-dark), var(--tertiary));
-    box-shadow: 3px 3px var(--dark);
+    box-shadow: 0px 3px 15px -2px #11111145;
     transform: translate(-1px, -1px);
   }
 
@@ -101,7 +101,6 @@ a:active {
    .btn:hover {
     color: var(--dark);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
   }
  .ul-nav-bar{
     margin-left: auto;
@@ -266,7 +265,11 @@ padding: 0px;
   .comment {
     margin-bottom: 0.5em;
     box-shadow: inset 0px 3px 15px -2px #11111145;
-    background-color: #FFCB74;
+    background-image: radial-gradient(var(--light-dark), var(--tertiary)),
+    linear-gradient(var(--tertiary), var(--light-dark), var(--tertiary));
+    background-size: 100% 200%;
+    background-position: center;
+    background-blend-mode: color-burn;
     border-radius: var(--border-radius);
   }
   .card-body {
