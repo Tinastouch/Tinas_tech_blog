@@ -238,11 +238,15 @@ padding: 0px;
   }
 
   .dashboard-ol li:first-child {
-    border-radius: 25px 25px .3rem .3rem;
+    border-radius: .8rem .8rem .3rem .3rem;
   }
 
   .dashboard-ol li:last-child {
-    border-radius: .3rem .3rem 25px 25px;
+    border-radius: .3rem .3rem .8rem .8rem;
+  }
+
+  .dashboard-ol li:only-child {
+    border-radius: .8rem .8rem .8rem .8rem;
   }
 
   .postname {
@@ -270,7 +274,18 @@ padding: 0px;
     background-size: 100% 200%;
     background-position: center;
     background-blend-mode: color-burn;
-    border-radius: var(--border-radius);
+  }
+
+  .comment:first-child {
+    border-radius: .8rem .8rem .3rem .3rem;
+  }
+
+  .comment:last-child {
+    border-radius: .3rem .3rem .8rem .8rem;
+  }
+
+  .comment:only-child {
+    border-radius: .8rem .8rem .8rem .8rem;
   }
   .card-body {
     padding: 2.5%;
