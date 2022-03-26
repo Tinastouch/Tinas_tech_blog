@@ -234,8 +234,16 @@ padding: 0px;
     margin-top: 1.5em;
     padding: 1em;
     list-style-type: none;
-    border-radius: var(--border-radius);
     border-color: var(--light-dark);
+    border-radius: var(--border-radius);
+  }
+
+  .dashboard-ol li:first-child {
+    border-radius: 25px 25px .3rem .3rem;
+  }
+
+  .dashboard-ol li:last-child {
+    border-radius: .3rem .3rem 25px 25px;
   }
 
   .postname {
