@@ -260,7 +260,7 @@ padding: 0px;
   }
   .content,
   .edit-link {
-    margin-inline: 1.5em;
+    margin-inline: 1em;
   }
 
   .title a{
@@ -287,6 +287,7 @@ padding: 0px;
 
   .comment:first-child {
     border-radius: .8rem .8rem .3rem .3rem;
+    margin-top: 1em;
   }
 
   .comment:last-child {
