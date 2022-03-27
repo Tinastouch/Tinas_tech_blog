@@ -290,6 +290,11 @@ padding: 0px;
     margin-top: 1em;
   }
 
+  ::selection {
+    background-color: #2F2F2F;
+    color:#FFCB74;
+  }
+
   .comment:last-child {
     border-radius: .3rem .3rem .8rem .8rem;
   }
